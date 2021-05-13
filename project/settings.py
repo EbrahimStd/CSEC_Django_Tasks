@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'crispy_forms', # https://django-crispy-forms.readthedocs.io/en/latest/install.html
 
     'accounts',
-    # 'blog'
+    'blog'
 
 ]
 

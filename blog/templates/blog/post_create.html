@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+{% block body %}
+
+    
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <!-- {{ form|crispy }} -->
+    {% bootstrap_form form %}
+    <button type="submit" class="btn btn-success">Save person</button>
+  </form>
+
+{% endblock body %}
