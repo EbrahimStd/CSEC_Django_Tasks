@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     "bootstrap4", # https://pypi.org/project/django-bootstrap4/
     'crispy_forms', # https://django-crispy-forms.readthedocs.io/en/latest/install.html
 
+    'accounts',
+    # 'blog'
 
 ]
 
