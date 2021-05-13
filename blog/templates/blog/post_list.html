@@ -11,7 +11,7 @@
                 <div class="col-md-8 mx-auto">
                     <h1 class="my-4">
                         Our Blog
-                        <small><a href="#">Create Post</a></small>
+                        <small><a href="{% url 'blog:post_create' %}">Create Post</a></small>
                     </h1>
                     <!-- Blog post-->
                     {% for post in post_list %}

@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,7 +44,7 @@ INSTALLED_APPS = [
     "bootstrap4", # https://pypi.org/project/django-bootstrap4/
     'crispy_forms', # https://django-crispy-forms.readthedocs.io/en/latest/install.html
 
-    'accounts',
+    
     'blog'
 
 ]
@@ -123,6 +124,11 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# my URL
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+# LOGIN_REDIRECT_URL = 'home'
 
 
 # Static files (CSS, JavaScript, Images)
