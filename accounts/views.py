@@ -1,7 +1,8 @@
-from accounts.forms import SignupForm
-from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect, render
 
+from accounts.forms import SignupForm
 
 # Create your views here.
 
@@ -29,3 +30,11 @@ def signup(request):
       form = SignupForm()
    return render(request,'registration/signup.html',{'form':form})
 
+
+
+# show profile data to user
+@login_required
+def profile(request):
+   profile = request.user
+   context = {'profile':profile}
+   return render(request, 'profile/profile.html',context)
